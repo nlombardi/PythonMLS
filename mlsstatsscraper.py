@@ -142,10 +142,10 @@ class MlsStatsScraper(object):
 
                             
             # Check to see if file exists
-            if not os.path.isfile('/Users/nlomb/Documents/Development/Python/MLS/' + fname + '.txt'):
+            if not os.path.isfile('INSERT_DIR' + fname + '.txt'):
             
             		# Output contents int json file
-		            with open('/Users/nlomb/Documents/Development/Python/MLS/' + fname + '.txt', 'w') as f:
+		            with open('INSERT_DIR' + fname + '.txt', 'w') as f:
 		            	
 		            	json.dump(data,f)
 		            	print ("Scrape {} Complete".format(fname))
