@@ -26,11 +26,11 @@ team_data = pd.DataFrame()
 
 # Add extension to chrome
 ext = webdriver.ChromeOptions()
-ext.add_extension('/Users/nlomb/Documents/Development/Python/Chrome/Ext/1.13.5_0.crx')
+ext.add_extension('INSERT_DIR/Chrome/Ext/1.13.5_0.crx')
 ext.add_argument('--no-first-run')
 
 # Initialize web driver and get the URL
-wd = webdriver.Chrome(executable_path='/Users/nlomb/Documents/Development/Python/Chrome/chromedriver', chrome_options=ext)
+wd = webdriver.Chrome(executable_path='/INSERT_DIR/Chrome/chromedriver', chrome_options=ext)
 wd.get('https://www.whoscored.com/Regions/233/Tournaments/85/Seasons/3672/Stages/7250/Fixtures/USA-Major-League-Soccer-2013')
 
 # Wait for the dynamic elements to load
@@ -160,7 +160,7 @@ for year in years:
 					"""
 					
 					# Opens game page link and gets the link for the game summary page
-					wd = webdriver.Chrome(executable_path='/Users/nlomb/Documents/Development/Python/Chrome/chromedriver', chrome_options=ext)
+					wd = webdriver.Chrome(executable_path='INSER_DIR/Chrome/chromedriver', chrome_options=ext)
 					wd.get('https://www.whoscored.com' + str(StatsLink))
 					game_page = wd.page_source
 					game_soup = bs(game_page, 'html.parser')
@@ -366,7 +366,7 @@ for year in years:
 					"""
 					
 					# Opens game page link and gets the link for the game summary page
-					wd = webdriver.Chrome(executable_path='/Users/nlomb/Documents/Development/Python/Chrome/chromedriver', chrome_options=ext)
+					wd = webdriver.Chrome(executable_path='INSERT_DIR/Chrome/chromedriver', chrome_options=ext)
 					wd.get('https://www.whoscored.com' + str(StatsLink))
 					game_page = wd.page_source
 					game_soup = bs(game_page, 'html.parser')
@@ -564,7 +564,7 @@ for year in years:
 					"""
 					
 					# Opens game page link and gets the link for the game summary page
-					wd = webdriver.Chrome(executable_path='/Users/nlomb/Documents/Development/Python/Chrome/chromedriver', chrome_options=ext)
+					wd = webdriver.Chrome(executable_path='INSERT_DIR/Chrome/chromedriver', chrome_options=ext)
 					wd.get('https://www.whoscored.com' + str(StatsLink))
 					game_page = wd.page_source
 					game_soup = bs(game_page, 'html.parser')
@@ -698,6 +698,6 @@ for year in years:
 		for i in team_data:
 			team_data[i] = team_data[i].map(lambda x: str(x)[:-3]).map(lambda y: str(y)[3:])
 										
-		team_data.to_csv('/Users/nlomb/Documents/Development/Python/MLS/csv/data_' + str(year[1]) + '.csv', encoding='utf-8')
+		team_data.to_csv('INSERT_DIR/csv/data_' + str(year[1]) + '.csv', encoding='utf-8')
 
 wd.quit()
