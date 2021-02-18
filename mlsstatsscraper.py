@@ -159,7 +159,7 @@ class MlsStatsScraper(object):
 if __name__ == '__main__':
 
     # Hardcoded initalization variable(s)
-    OUTPUT_DIR = '/Users/nlomb/Documents/Development/Python/MLS/'
+    OUTPUT_DIR = 'INSERT_DIR'
     ROOT_URL = 'http://www.mlssoccer.com/stats/'
     ENDPOINT = 'season'
     PARAMS = {'page': 0}
