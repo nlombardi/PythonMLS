@@ -25,11 +25,11 @@ import numpy as np
 
 # Add extension to chrome
 ext = webdriver.ChromeOptions()
-ext.add_extension('/Users/nlomb/Documents/Development/Python/Chrome/Ext/1.13.5_0.crx')
+ext.add_extension('INSERT_DIR/Chrome/Ext/1.13.5_0.crx')
 ext.add_argument('--no-first-run')
 
 # Initialize web driver and get the URL
-wd = webdriver.Chrome(executable_path='/Users/nlomb/Documents/Development/Python/Chrome/chromedriver',
+wd = webdriver.Chrome(executable_path='INSERT_DIR/Chrome/chromedriver',
                       chrome_options=ext)
 wd.get(
     'https://www.whoscored.com/Regions/233/Tournaments/85/Seasons/3672/Stages/7250/Fixtures/USA-Major-League-Soccer-2013')
@@ -330,7 +330,7 @@ for year in years:
         for i in player_data:
             player_data[i] = player_data[i].map(lambda x: str(x)[:-3]).map(lambda y: str(y)[3:])
 
-        player_data.to_csv('/Users/nlomb/Documents/Development/Python/MLS/csv/data_' + str(year[1]) + '.csv',
+        player_data.to_csv('INSERT_DIR/csv/data_' + str(year[1]) + '.csv',
                            encoding='utf-8')
 
 wd.quit()
