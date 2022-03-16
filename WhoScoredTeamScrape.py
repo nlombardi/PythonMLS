@@ -4,7 +4,7 @@ Javascript/HTML web scraper for "WhoScored"
 
 Scrapes the web pages for seasons 2013-2017 and gets all team data
 
-By The_Glove
+By Nick Lombardi
 
 """
 
